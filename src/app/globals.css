@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #F8F6F3; /* sep-warm-white */
+    color: #1F1F1F; /* sep-dark-text */
+    position: relative;
+  }
+  
+  /* Global texture overlay for a premium feel */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-sep-primary/5 shadow-xl transition-all duration-500;
+  }
+  
+  .glass-card {
+    @apply bg-white/85 backdrop-blur-lg border border-sep-light-gray/60 shadow-lg rounded-2xl hover:border-sep-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500;
+  }
+  
+  .glass-premium {
+    @apply bg-white/95 backdrop-blur-2xl border border-white/80 shadow-[0_10px_40px_rgb(0,0,0,0.03),inset_0_1px_0_rgba(255,255,255,0.6)] rounded-3xl transition-all duration-500;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sep-primary to-sep-soft-red relative z-10;
+  }
+  
+  /* --- Interactive & Animation Styles --- */
+  
+  .icon-pulse {
+    @apply transition-all duration-500 cursor-pointer ease-out;
+  }
+  .icon-pulse:hover {
+    @apply text-sep-primary drop-shadow-[0_0_15px_rgba(178,34,34,0.4)] scale-110 -translate-y-0.5;
+  }
+  .icon-pulse:active {
+    @apply scale-95 drop-shadow-[0_0_20px_rgba(230,57,70,0.6)] translate-y-0;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-500 ease-out border border-transparent bg-white;
+  }
+  .interactive-card:hover {
+    @apply -translate-y-2 border-sep-primary/30 shadow-[0_20px_40px_rgba(178,34,34,0.08),inset_0_0_30px_rgba(178,34,34,0.02)] z-10 relative;
+  }
+
+  .neon-glow {
+    @apply transition-all duration-500 ease-out;
+  }
+  .neon-glow:hover {
+    @apply shadow-[0_0_35px_rgba(178,34,34,0.25)] border-sep-primary/50 scale-[1.01] z-10 relative;
+  }
+  .neon-glow:active {
+    @apply scale-[0.99] shadow-[0_0_40px_rgba(230,57,70,0.4)];
+  }
+
+  .hover-shine {
+    @apply relative overflow-hidden transition-all duration-500;
+  }
+  .hover-shine::after {
+    content: '';
+    @apply absolute top-0 -left-[100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] transition-all duration-700 ease-out;
+  }
+  .hover-shine:hover::after {
+    @apply left-[200%];
+  }
+  
+  .filter-glow {
+    @apply transition-all duration-500 ease-out;
+  }
+  .filter-glow:hover {
+    @apply bg-sep-primary/5 border-sep-primary/30 shadow-[0_5px_15px_rgba(178,34,34,0.06)] -translate-y-0.5;
+  }
+  .filter-glow:focus, .filter-glow:focus-within {
+    @apply border-sep-primary ring-4 ring-sep-primary/20 shadow-[0_10px_30px_rgba(178,34,34,0.15)] bg-white;
+  }
+
+  .bg-shemagh-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23B22222' fill-opacity='0.02' fill-rule='evenodd'/%3E");
+  }
+  
+  .glass-ribbon {
+    @apply absolute w-[120%] h-32 bg-gradient-to-r from-transparent via-sep-primary/5 to-transparent blur-3xl -rotate-3 pointer-events-none;
+  }
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #E9E6E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C94C4C;
+}
