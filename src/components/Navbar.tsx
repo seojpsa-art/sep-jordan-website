@@ -47,29 +47,42 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative text-sm font-bold text-sep-muted hover:text-sep-primary transition-colors py-2 uppercase tracking-wide"
-                onMouseEnter={() => setActiveHover(link.name)}
-                onMouseLeave={() => setActiveHover(null)}
-              >
-                {link.name}
-                {activeHover === link.name && (
-                  <motion.div
-                    layoutId="navbar-underline"
-                    className="absolute left-0 -bottom-1 w-full h-0.5 bg-sep-primary"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  />
-                )}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.name === "Incomings") {
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="relative text-sm font-bold text-white bg-sep-primary px-5 py-2 rounded-full shadow-[0_0_15px_rgba(178,34,34,0.35)] hover:shadow-[0_0_20px_rgba(178,34,34,0.5)] hover:bg-sep-deep-red transition-all duration-300 uppercase tracking-wide hover:-translate-y-0.5 neon-glow hover-shine"
+                  >
+                    {link.name}
+                  </Link>
+                );
+              }
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="relative text-sm font-bold text-sep-muted hover:text-sep-primary transition-colors py-2 uppercase tracking-wide"
+                  onMouseEnter={() => setActiveHover(link.name)}
+                  onMouseLeave={() => setActiveHover(null)}
+                >
+                  {link.name}
+                  {activeHover === link.name && (
+                    <motion.div
+                      layoutId="navbar-underline"
+                      className="absolute left-0 -bottom-1 w-full h-0.5 bg-sep-primary shadow-[0_0_8px_rgba(178,34,34,0.6)]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
             <Link
               href="#apply"
-              className="bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-[0_4px_15px_rgba(178,34,34,0.2)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.3)] hover:-translate-y-0.5"
+              className="bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-[0_4px_15px_rgba(178,34,34,0.2)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.3)] hover:-translate-y-0.5 neon-glow hover-shine"
             >
               Apply Now
             </Link>
@@ -79,7 +92,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <Link
               href="/#apply"
-              className="bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-4 py-2 rounded-full text-xs shadow-[0_4px_12px_rgba(178,34,34,0.3)] transition-colors whitespace-nowrap"
+              className="bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-4 py-2 rounded-full text-xs shadow-[0_4px_12px_rgba(178,34,34,0.3)] transition-colors whitespace-nowrap neon-glow hover-shine"
             >
               Apply
             </Link>
@@ -104,7 +117,7 @@ export default function Navbar() {
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <Link href="/" className="text-lg font-bold text-sep-muted hover:text-sep-primary py-2 transition-colors uppercase tracking-wide" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-              <Link href="/incomings" className="text-lg font-bold text-sep-muted hover:text-sep-primary py-2 transition-colors uppercase tracking-wide" onClick={() => setMobileMenuOpen(false)}>Incomings</Link>
+              <Link href="/incomings" className="text-lg font-bold text-white bg-sep-primary px-5 py-3 rounded-xl text-center shadow-[0_4px_15px_rgba(178,34,34,0.3)] hover:shadow-[0_6px_20px_rgba(178,34,34,0.4)] hover:bg-sep-deep-red transition-all uppercase tracking-wide mt-2 neon-glow hover-shine" onClick={() => setMobileMenuOpen(false)}>Incomings</Link>
             </div>
           </motion.div>
         )}

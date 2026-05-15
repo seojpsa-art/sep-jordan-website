@@ -16,14 +16,14 @@ export interface Country {
 export const countries: Country[] = [
   {
     country: "Spain",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
     ],
     dates: "June, July, August and September",
     duration: "2 weeks - 2 months. Preferably 2 weeks-1 month.",
-    spots: 10,
+    spots: "10 - 20",
     status: "Open",
     note: "Depending on the host, languages/year level may differ. A good level of English is compulsory (B2) and we highly recommend at least a basic level of Spanish. We recommend SEP for +3rd year, but this is not compulsory. We require a CV, a motivation letter and a Civil Responsibility Insurance.",
     continent: "Europe",
@@ -31,7 +31,7 @@ export const countries: Country[] = [
   },
   {
     country: "Egypt",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -41,7 +41,7 @@ export const countries: Country[] = [
     ],
     dates: "June,August and September.",
     duration: "2 weeks - 1 month",
-    spots: 10,
+    spots: "10 - 99",
     status: "Open",
     note: "English and arabic speakers and no specific academic years.",
     continent: "Africa",
@@ -49,7 +49,7 @@ export const countries: Country[] = [
   },
   {
     country: "Burkina Faso",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -66,7 +66,7 @@ export const countries: Country[] = [
   },
   {
     country: "Togo",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Industrial Pharmacy",
@@ -81,7 +81,7 @@ export const countries: Country[] = [
   },
   {
     country: "Kenya",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -91,14 +91,14 @@ export const countries: Country[] = [
     ],
     dates: "April, May, June, August, September",
     duration: "4-6 Weeks",
-    spots: 6,
+    spots: "5 - 6",
     status: "Open",
     note: "Year 3 and Above, Name Tag and Lab coat, A box of Gloves and masks.",
     continent: "Africa"
   },
   {
     country: "Indonesia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -108,14 +108,14 @@ export const countries: Country[] = [
     ],
     dates: "June – August",
     duration: "3 weeks - 1 month",
-    spots: 2,
+    spots: "2 - 20",
     status: "Open",
     note: "Knowledge of the English Language",
     continent: "Asia"
   },
   {
     country: "Singapore",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -125,14 +125,14 @@ export const countries: Country[] = [
     ],
     dates: "April 2026 to September 2026",
     duration: "1 month to 3 months",
-    spots: 45,
+    spots: "5 - 45",
     status: "Open",
     note: "Fluent in English, Second Year and above, CV, motivational letter",
     continent: "Asia"
   },
   {
     country: "Malaysia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -147,7 +147,7 @@ export const countries: Country[] = [
   },
   {
     country: "Nepal",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -155,14 +155,14 @@ export const countries: Country[] = [
     ],
     dates: "August-September",
     duration: "2 to 4 weeks",
-    spots: "To be announced",
+    spots: 3,
     status: "Coming Soon",
     note: "CV and Motivation letter required.",
     continent: "Asia"
   },
   {
     country: "UAE",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy"
@@ -176,7 +176,7 @@ export const countries: Country[] = [
   },
   {
     country: "Jordan",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -193,7 +193,7 @@ export const countries: Country[] = [
   },
   {
     country: "Algeria",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -210,7 +210,7 @@ export const countries: Country[] = [
   },
   {
     country: "Lebanon",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -227,7 +227,7 @@ export const countries: Country[] = [
   },
   {
     country: "the Netherlands",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -236,14 +236,14 @@ export const countries: Country[] = [
     ],
     dates: "June-September",
     duration: "2 weeks - 2 months",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "Proficient in English (B2)",
     continent: "Europe"
   },
   {
     country: "Türkiye",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -251,14 +251,14 @@ export const countries: Country[] = [
     ],
     dates: "All months",
     duration: "2 weeks to 8 weeks",
-    spots: 5,
+    spots: "5 - 40",
     status: "Open",
     note: "English proficiency",
     continent: "Europe"
   },
   {
     country: "Serbia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -274,7 +274,7 @@ export const countries: Country[] = [
   },
   {
     country: "Slovakia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -282,14 +282,14 @@ export const countries: Country[] = [
     ],
     dates: "July",
     duration: "2 weeks",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "B2 level in English",
     continent: "Europe"
   },
   {
     country: "Slovenia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -298,14 +298,14 @@ export const countries: Country[] = [
     ],
     dates: "May - September ",
     duration: "Depends on the host site, usually 2 weeks - 1 month",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "English (at least B2 level)",
     continent: "Europe"
   },
   {
     country: "Germany",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -313,14 +313,14 @@ export const countries: Country[] = [
     ],
     dates: "June/July-September",
     duration: "Flexible",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "For community pharmacy is under certain circumstances an advanced level of german necessary. No appartment is guaranteed, the SEO and LEO are supporting with the search of appartments",
     continent: "Europe"
   },
   {
     country: "Great Britain",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Community Pharmacy",
@@ -335,7 +335,7 @@ export const countries: Country[] = [
   },
   {
     country: "Canada",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -345,14 +345,14 @@ export const countries: Country[] = [
     ],
     dates: "May - August 2026",
     duration: "2-8 weeks",
-    spots: 5,
+    spots: "5 - 10",
     status: "Open",
     note: "English speaking (unless Quebec -> french speaking atleast)",
     continent: "North America"
   },
   {
     country: "Taiwan",
-    city: "To be announced",
+    city: "",
     fields: [
       "Hospital Pharmacy",
       "Clinical Pharmacy",
@@ -360,28 +360,28 @@ export const countries: Country[] = [
     ],
     dates: "June - September",
     duration: "2weeks~1month",
-    spots: 15,
+    spots: "15 - 20",
     status: "Open",
     note: "TBC",
     continent: "Asia"
   },
   {
     country: "Czechia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Clinical Pharmacy",
       "Community Pharmacy"
     ],
     dates: "July, August. Most placements will take place in July. ",
     duration: "2-3 weeks ",
-    spots: "To be announced",
+    spots: 32,
     status: "Coming Soon",
     note: "No specific requirements",
     continent: "Europe"
   },
   {
     country: "Thailand",
-    city: "To be announced",
+    city: "",
     fields: [
       "Clinical Pharmacy"
     ],
@@ -394,7 +394,7 @@ export const countries: Country[] = [
   },
   {
     country: "Mali",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
@@ -408,7 +408,7 @@ export const countries: Country[] = [
   },
   {
     country: "Australia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy"
     ],
@@ -421,21 +421,21 @@ export const countries: Country[] = [
   },
   {
     country: "Poland",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
     ],
     dates: "July-September",
     duration: "2 weeks",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "3rd year+, visa if not from EU, communicative english skills",
     continent: "Europe"
   },
   {
     country: "Hungary",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
@@ -449,7 +449,7 @@ export const countries: Country[] = [
   },
   {
     country: "Switzerland",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy"
     ],
@@ -462,7 +462,7 @@ export const countries: Country[] = [
   },
   {
     country: "Croatia",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
@@ -476,7 +476,7 @@ export const countries: Country[] = [
   },
   {
     country: "Bulgaria",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy"
     ],
@@ -489,37 +489,35 @@ export const countries: Country[] = [
   },
   {
     country: "United States of America",
-    city: "To be announced",
+    city: "",
     fields: [
       "Community Pharmacy",
       "Research"
     ],
     dates: "May-Aug (tentative)",
     duration: "To be announced",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "English fluency, TBC for others",
     continent: "North America"
   },
   {
     country: "Portugal",
-    city: "To be announced",
+    city: "",
     fields: [
-      "Community Pharmacy",
       "Research"
     ],
     dates: "June - September",
     duration: "Depends on the host site, usually 2 weeks - 1 month",
-    spots: "To be announced",
+    spots: "Contact the SEO for more details",
     status: "Coming Soon",
     note: "Knowledge of the English language",
     continent: "Europe"
   },
   {
     country: "Ethiopia",
-    city: "To be announced",
+    city: "",
     fields: [
-      "Community Pharmacy",
       "Industrial Pharmacy"
     ],
     dates: "June,July ,August ",
@@ -531,7 +529,7 @@ export const countries: Country[] = [
   },
   {
     country: "Cyprus",
-    city: "To be announced",
+    city: "",
     fields: [
       "Research"
     ],
@@ -544,7 +542,7 @@ export const countries: Country[] = [
   },
   {
     country: "Korea",
-    city: "To be announced",
+    city: "",
     fields: [
       "Research",
       "Other"
@@ -558,7 +556,7 @@ export const countries: Country[] = [
   },
   {
     country: "Romania",
-    city: "To be announced",
+    city: "",
     fields: [
       "Research"
     ],
@@ -571,7 +569,7 @@ export const countries: Country[] = [
   },
   {
     country: "Japan",
-    city: "To be announced",
+    city: "",
     fields: [
       "Other"
     ],

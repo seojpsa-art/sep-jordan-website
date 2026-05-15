@@ -39,7 +39,7 @@ export default function Testimonials() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               key={index}
-              className="glass-premium p-8 w-full flex flex-col relative group hover:-translate-y-2 transition-transform duration-300"
+              className="glass-premium p-8 w-full flex flex-col relative group hover:-translate-y-2 transition-transform duration-300 interactive-card neon-glow"
             >
               <div className="absolute top-0 right-8 w-16 h-16 bg-sep-primary/5 rounded-b-3xl -z-10 group-hover:bg-sep-primary/10 transition-colors" />
               <Quote className="absolute top-8 right-10 w-10 h-10 text-sep-primary/20 group-hover:text-sep-primary/40 transition-colors duration-300" />

@@ -62,7 +62,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               key={index}
-              className="glass border border-sep-light-gray rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="glass border border-sep-light-gray rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow interactive-card"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}

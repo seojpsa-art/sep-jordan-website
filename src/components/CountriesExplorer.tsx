@@ -128,7 +128,7 @@ export default function CountriesExplorer() {
             transition={{ delay: 0.2 }}
             className="mt-6 flex flex-col items-center gap-2"
           >
-            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-sep-primary/10 text-sep-primary font-bold text-sm tracking-wide border border-sep-primary/20 shadow-sm">
+            <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-sep-primary/10 text-sep-primary font-bold text-sm tracking-wide border border-sep-primary/20 shadow-sm neon-glow hover-shine cursor-default">
               <Globe className="w-4 h-4" /> {countries.length} Destinations Available
             </div>
             <p className="text-sm text-sep-muted/80 font-medium italic">
@@ -245,7 +245,7 @@ export default function CountriesExplorer() {
                   initial={{ opacity: 0, scale: 0.9, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
                   key={country.country}
                   className={`group relative flex flex-col h-full bg-white rounded-3xl interactive-card ${
                     isSelected 
@@ -282,10 +282,12 @@ export default function CountriesExplorer() {
                   <div className="p-6 pt-12 flex-1 flex flex-col">
                     <div className="mb-4">
                       <h3 className="text-2xl font-black text-sep-dark-text mb-1 group-hover:text-sep-primary transition-colors">{country.country}</h3>
-                      <div className="flex items-center text-sm font-medium text-sep-muted">
-                        <MapPin className="w-4 h-4 mr-1 text-sep-soft-red" />
-                        {country.city}
-                      </div>
+                      {country.city && !country.city.toLowerCase().includes("announced") && (
+                        <div className="flex items-center text-sm font-medium text-sep-muted">
+                          <MapPin className="w-4 h-4 mr-1 text-sep-soft-red" />
+                          {country.city}
+                        </div>
+                      )}
                     </div>
 
                     {/* Info Grid */}
@@ -335,7 +337,7 @@ export default function CountriesExplorer() {
                           isSelected
                             ? 'bg-green-500 text-white shadow-md hover:bg-green-600'
                             : country.status === 'Coming Soon' 
-                              ? 'bg-gray-50 text-gray-400 cursor-not-allowed hover-shine-none'
+                              ? 'bg-red-50 text-sep-soft-red border border-red-100 cursor-not-allowed hover-shine-none text-sm'
                               : 'bg-sep-primary/5 text-sep-primary hover:bg-sep-primary hover:text-white border border-sep-primary/20 group-hover:bg-sep-primary group-hover:text-white'
                         }`}
                       >
@@ -345,7 +347,7 @@ export default function CountriesExplorer() {
                             Selected
                           </>
                         ) : country.status === 'Coming Soon' ? (
-                          'Not Available Yet'
+                          'Contact the SEO for more details'
                         ) : (
                           <>
                             Select Destination
@@ -383,7 +385,7 @@ export default function CountriesExplorer() {
               const formSection = document.getElementById("apply");
               if (formSection) formSection.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group relative inline-flex items-center justify-center gap-2 bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-8 py-4 rounded-full shadow-[0_8px_25px_rgba(178,34,34,0.3)] hover:shadow-[0_12px_30px_rgba(178,34,34,0.4)] transition-all hover:-translate-y-1"
+            className="group relative inline-flex items-center justify-center gap-2 bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-8 py-4 rounded-full shadow-[0_8px_25px_rgba(178,34,34,0.3)] hover:shadow-[0_12px_30px_rgba(178,34,34,0.4)] transition-all hover:-translate-y-1 neon-glow hover-shine"
           >
             Apply Now
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

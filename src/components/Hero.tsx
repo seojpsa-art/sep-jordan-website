@@ -85,9 +85,10 @@ export default function Hero() {
               </Link>
               <Link 
                 href="/incomings"
-                className="group flex items-center justify-center gap-2 bg-white hover:bg-sep-warm-white border border-sep-light-gray text-sep-dark-text font-bold px-8 py-4 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] filter-glow"
+                className="group flex items-center justify-center gap-2 bg-sep-primary hover:bg-sep-deep-red text-white font-bold px-8 py-4 rounded-xl shadow-[0_8px_25px_rgba(178,34,34,0.25)] neon-glow hover-shine"
               >
                 For Incomings
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           </div>

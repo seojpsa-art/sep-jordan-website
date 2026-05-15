@@ -84,7 +84,7 @@ export default function IncomingsPage() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
-              className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white/90 backdrop-blur-2xl border border-white/80 px-8 py-5 rounded-[2rem] shadow-[0_20px_50px_rgba(178,34,34,0.1),inset_0_1px_0_rgba(255,255,255,0.6)] hover:-translate-y-2 transition-all duration-500 cursor-default interactive-card relative overflow-hidden group"
+              className="inline-flex flex-col sm:flex-row items-center gap-6 bg-white/90 backdrop-blur-2xl border border-white/80 px-8 py-5 rounded-[2rem] shadow-[0_20px_50px_rgba(178,34,34,0.15)] hover:-translate-y-2 transition-all duration-500 cursor-default interactive-card relative overflow-hidden group neon-glow hover-shine"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-sep-primary/0 via-sep-primary/5 to-sep-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               <div className="text-5xl md:text-7xl font-black text-sep-primary drop-shadow-md tracking-tighter group-hover:scale-105 transition-transform duration-500">+30</div>
@@ -131,7 +131,7 @@ export default function IncomingsPage() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
                 key={i}
-                className="glass-premium rounded-[32px] overflow-hidden border border-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_60px_rgba(178,34,34,0.15)] hover:-translate-y-2 transition-all duration-500 relative group bg-white"
+                className="glass-premium rounded-[32px] overflow-hidden border border-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(178,34,34,0.3)] hover:-translate-y-2 transition-all duration-500 relative group bg-white interactive-card neon-glow"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="aspect-[9/16] bg-sep-off-white relative w-full">
@@ -499,14 +499,13 @@ export default function IncomingsPage() {
               {/* Right Side: Contact Cards */}
               <div className="space-y-4">
                 
-                {/* Email Card */}
                 <motion.a
                   href="mailto:seo.jpsa@gmail.com"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className="group block bg-white border border-sep-light-gray hover:border-sep-primary/40 p-6 rounded-2xl shadow-sm hover:shadow-[0_10px_30px_rgba(178,34,34,0.1)] transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                  className="group block bg-white border border-sep-light-gray hover:border-sep-primary/40 p-6 rounded-2xl shadow-sm hover:shadow-[0_10px_30px_rgba(178,34,34,0.1)] transition-all duration-300 hover:-translate-y-1 relative overflow-hidden interactive-card neon-glow"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-sep-primary/0 to-sep-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="flex items-center gap-5 relative z-10">
@@ -532,7 +531,7 @@ export default function IncomingsPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="group block bg-white border border-sep-light-gray hover:border-sep-primary/40 p-6 rounded-2xl shadow-sm hover:shadow-[0_10px_30px_rgba(178,34,34,0.1)] transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                  className="group block bg-white border border-sep-light-gray hover:border-sep-primary/40 p-6 rounded-2xl shadow-sm hover:shadow-[0_10px_30px_rgba(178,34,34,0.1)] transition-all duration-300 hover:-translate-y-1 relative overflow-hidden interactive-card neon-glow"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-sep-primary/0 to-sep-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="flex items-center gap-5 relative z-10">

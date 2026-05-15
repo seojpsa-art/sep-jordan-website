@@ -279,7 +279,7 @@ export default function ApplicationForm() {
                     className={`w-full flex items-center justify-center gap-3 py-5 rounded-xl font-bold text-lg transition-all duration-300 ${
                       isSubmitting || !formData.agreement 
                         ? 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200' 
-                        : 'bg-sep-primary hover:bg-sep-deep-red text-white shadow-[0_8px_20px_rgba(178,34,34,0.3)] hover:shadow-[0_12px_25px_rgba(178,34,34,0.4)] hover:-translate-y-1'
+                        : 'bg-sep-primary hover:bg-sep-deep-red text-white shadow-[0_8px_20px_rgba(178,34,34,0.3)] hover:shadow-[0_12px_25px_rgba(178,34,34,0.4)] hover:-translate-y-1 neon-glow hover-shine'
                     }`}
                   >
                     {isSubmitting ? (
