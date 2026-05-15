@@ -3,54 +3,54 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-
     const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
 
+    // 1. If GOOGLE_SCRIPT_URL is missing, return JSON error.
     if (!scriptUrl) {
-      console.error("GOOGLE_SCRIPT_URL is missing in environment variables.");
       return NextResponse.json(
-        { success: false, error: "Server configuration error: Webhook URL missing." },
+        { error: "GOOGLE_SCRIPT_URL environment variable is missing." },
         { status: 500 }
       );
     }
 
-    console.log("GOOGLE_SCRIPT_URL exists. Forwarding data...");
-
-    const response = await fetch(scriptUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
-
-    console.log(`Received response from Google Apps Script with status: ${response.status}`);
-
-    let result: any = {};
-    const responseText = await response.text();
-    
+    let response;
     try {
-      result = JSON.parse(responseText);
-    } catch (e) {
-      console.warn("Failed to parse JSON response from Apps Script:", responseText);
-      result = { raw: responseText };
-    }
-    
-    console.log("Parsed response:", result);
-
-    if (!response.ok || result.success === false) {
-      console.error("Submission rejected by upstream service:", result);
+      response = await fetch(scriptUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+        redirect: "follow",
+      });
+    } catch (error: any) {
+      // 3. If fetch fails, return JSON error.
       return NextResponse.json(
-        { success: false, error: result.error || "Failed to submit application to the database." },
-        { status: response.status >= 400 ? response.status : 400 }
+        { error: "Failed to fetch from Google Apps Script." },
+        { status: 500 }
       );
+    }
+
+    // 2. If Apps Script returns non-200, return JSON error.
+    if (!response.ok) {
+      return NextResponse.json(
+        { error: `Google Apps Script returned status ${response.status}` },
+        { status: response.status }
+      );
+    }
+
+    let result = {};
+    const text = await response.text();
+    try {
+      result = JSON.parse(text);
+    } catch (e) {
+      result = { raw: text };
     }
 
     return NextResponse.json({ success: true, result });
   } catch (error: any) {
-    console.error("Submission error:", error);
     return NextResponse.json(
-      { success: false, error: "An unexpected error occurred during submission." },
+      { error: "An unexpected server error occurred." },
       { status: 500 }
     );
   }
